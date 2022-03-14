@@ -1,0 +1,35 @@
+@mixin bp-up($min-width) {
+  @media screen and (min-width: $min-width) {
+    @content;
+  }
+}
+
+@mixin bp-down($max-width) {
+  @media screen and (max-width: $max-width) {
+    @content;
+  }
+}
+
+@mixin bp-between($min-width, $max-width) {
+  @media screen and (min-width: $min-width) and (max-width: $max-width) {
+    @content;
+  }
+}
+
+@mixin bp-height-up($min-height) {
+  @media screen and (min-height: $min-height) {
+    @content;
+  }
+}
+
+@mixin bp-height-down($max-height) {
+  @media screen and (max-height: $max-height) {
+    @content;
+  }
+}
+
+@mixin bp-height-between($min-height, $max-height) {
+  @media screen and (min-height: $min-height) and (max-height: $max-height) {
+    @content;
+  }
+}
