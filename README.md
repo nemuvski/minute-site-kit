@@ -8,9 +8,12 @@
 ## コマンド
 
 - `yarn run clean`
-  - `public/css` と `public/js` を削除します。
+  - `dist/` と `node_modules/.vite/`（キャッシュ）を削除します。
 - `yarn run build`
-  - SCSSファイルとJSファイルを変換して、 `public/css` または `public/js` へ出力します。
+  - HTMLファイル、SCSSファイルとTypeScriptファイル等を変換＆バンドルして、`dist/`に出力します。
 - `yarn run dev`
   - ホットリロードモードでローカルサーバーが起動します。
   - 同時に、 `http://localhost:8080/` でブラウザが開きます。
+- `yarn run preview`
+  - ビルド成果物をローカルサーバーで確認できます。 （プレビューの用途）
+  - *※ 先にビルドをすること*
