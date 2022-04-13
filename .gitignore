@@ -7,5 +7,4 @@ yarn-error.log
 
 *.css.map
 
-/public/css
-/public/js
+/dist
