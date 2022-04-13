@@ -2,7 +2,7 @@ import { resolve, join } from 'path'
 import { defineConfig } from 'vite'
 import { createHtmlPlugin } from 'vite-plugin-html'
 import eslintPlugin from 'vite-plugin-eslint'
-import autoprefixer = require('autoprefixer')
+import autoprefixer from 'autoprefixer'
 
 const PORT = 8080
 const BASE_PATH = '/'
