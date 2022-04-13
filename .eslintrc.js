@@ -3,8 +3,12 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  plugins: ['regexp'],
-  extends: ['standard', 'prettier', 'plugin:regexp/recommended'],
+  plugins: ['@typescript-eslint', 'regexp'],
+  extends: ['standard', 'prettier', 'plugin:regexp/recommended', 'plugin:@typescript-eslint/recommended'],
+  parserOptions: {
+    sourceType: 'module',
+  },
+  parser: '@typescript-eslint/parser',
   rules: {
     'comma-dangle': ['error', 'only-multiline'],
     'multiline-ternary': 'off',
@@ -16,7 +20,7 @@ module.exports = {
         asyncArrow: 'always',
       },
     ],
-    semi: ['error', 'always'],
+    semi: 'off',
     'no-unused-vars': 'off',
   },
 };
