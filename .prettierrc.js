@@ -6,4 +6,4 @@ module.exports = {
   semi: false,
   arrowParens: 'always',
   endOfLine: 'lf',
-};
+}

@@ -6,4 +6,4 @@ module.exports = {
     'prettier/prettier': true,
     'string-quotes': 'single',
   },
-};
+}

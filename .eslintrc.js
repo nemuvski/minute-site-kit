@@ -23,4 +23,4 @@ module.exports = {
     semi: 'off',
     'no-unused-vars': 'off',
   },
-};
+}
