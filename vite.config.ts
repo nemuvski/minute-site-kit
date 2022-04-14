@@ -2,6 +2,7 @@ import { resolve, join } from 'path'
 import { defineConfig } from 'vite'
 import { createHtmlPlugin } from 'vite-plugin-html'
 import eslintPlugin from 'vite-plugin-eslint'
+import sassGlobImports from 'vite-plugin-sass-glob-import'
 import autoprefixer from 'autoprefixer'
 
 const PORT = 8080
@@ -38,6 +39,7 @@ export default defineConfig(({ mode }) => {
       pure: esbuildPure,
     },
     plugins: [
+      sassGlobImports(),
       eslintPlugin({ cache: true, fix: false, throwOnWarning: true, throwOnError: true }),
       createHtmlPlugin({
         minify: {
