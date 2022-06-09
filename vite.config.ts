@@ -11,6 +11,7 @@ const CLIENT_PUBLIC_ENV_PREFIX = 'PUBLIC_'
 const ROOT_DIR_PATH = resolve(__dirname, 'src')
 const PUBLIC_ASSETS_DIR_PATH = join(ROOT_DIR_PATH, 'static')
 const OUTPUT_DIR_PATH = resolve(__dirname, 'dist')
+const BUILD_ASSETS_DIR = 'assets'
 const ENV_DIR_PATH = __dirname
 
 export default defineConfig(({ mode }) => {
@@ -34,6 +35,9 @@ export default defineConfig(({ mode }) => {
       outDir: OUTPUT_DIR_PATH,
       emptyOutDir: true,
       manifest: true,
+      assetsDir: BUILD_ASSETS_DIR,
+      // 指定した数値[byte]よりも小さい画像,データはBase64URLとしてインライン化する（0で無効にしている）
+      assetsInlineLimit: 0,
     },
     esbuild: {
       pure: esbuildPure,
