@@ -14,6 +14,7 @@ const OUTPUT_DIR_PATH = resolve(__dirname, 'dist')
 const BUILD_ASSETS_DIR = 'assets'
 const ENV_DIR_PATH = __dirname
 
+// @ts-ignore: vite-plugin-sass-glob-importで対応が必要
 export default defineConfig(({ mode }) => {
   const isProductionMode = mode === 'production'
   const esbuildPure = isProductionMode ? ['console.log', 'console.info', 'console.debug', 'console.trace'] : undefined
@@ -44,7 +45,7 @@ export default defineConfig(({ mode }) => {
     },
     plugins: [
       sassGlobImports(),
-      eslintPlugin({ throwOnWarning: true, throwOnError: true }),
+      eslintPlugin(),
       createHtmlPlugin({
         minify: {
           removeComments: true,
